@@ -77,8 +77,7 @@ export class Router {
 
   public scan(server: FastifyInstance) {
     this.routes.forEach((route) => {
-      const requestMethod = route.method;
-      server.route({ ...route, method: requestMethod });
+      server.route(route);
     });
   }
 
