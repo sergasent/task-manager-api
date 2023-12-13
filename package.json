@@ -39,7 +39,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": "npm run lint",
+    "*.{js,ts}": "npm run lint && npm run build",
     "*.{js,ts,json}": "prettier . --write"
   },
   "dependencies": {
