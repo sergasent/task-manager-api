@@ -8,7 +8,7 @@
     "start": "npm run build && node ./build/index.js",
     "build": "rimraf ./build && tsc",
     "dev": "nodemon --watch src src/index.ts",
-    "lint": "eslint . --ext .ts,.js",
+    "lint": "tsc --project ./tsconfig.json --noEmit && eslint . **/*.{ts,js}",
     "lint:fix": "eslint . --ext .ts --fix",
     "prettier-format": "prettier --config .prettier 'src/**/*.ts' --write",
     "prepare": "husky install"
